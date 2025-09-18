@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root{
+  background-color: black;
+  color: white;
+}
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+.effect-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.effect-hover:hover::before {
+  transform: translateY(0%);
+}
+
+.effect-hover > * {
+  position: relative;
+  z-index: 10;
+}
