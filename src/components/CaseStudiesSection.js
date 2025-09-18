@@ -6,8 +6,8 @@ import Image from 'next/image'
 /* ---------- data ---------- */
 const caseStudies = [
   {
-    beforeimage: '/images/home/case-studies/zainab-before.webp',
-    afterimage: '/images/home/case-studies/zainab-after.webp',
+    beforeimage: '/images/home/case-studies/Zainab-before.webp',
+    afterimage: '/images/home/case-studies/Zainab-after.webp',
     title: 'Zainab',
     service: 'Hydra Facial',
     para:
