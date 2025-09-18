@@ -62,32 +62,32 @@ export default function Home() {
   {
     id: 'Giig67nMzVU',
     title: 'Synthetic Hair Transplant in Bangalore',
-    name: 'Dr. Jane Doe',
+    name: 'Biofibre',
     creds: 'MBBS, DNB — Dermatology',
   },
   {
-    id: 'dQw4w9WgXcQ', // placeholder - replace
+    id: 'OPiQa5uBUr8', // placeholder - replace
     title: 'Hair Transplant Process — Walkthrough',
-    name: 'Dr. Priya Sharma',
+    name: 'Transplant',
     creds: 'MD — Hair Restoration',
   },
   {
-    id: 'kXYiU_JCYtU', // placeholder - replace
-    title: 'Hydra Facial: Before & After',
-    name: 'Dr. Ramesh',
+    id: 'gsLLV1qmOYY', // placeholder - replace
+    title: 'Hydra Facial',
+    name: 'HF',
     creds: 'Cosmetic Specialist',
   },
   {
-    id: '3JZ_D3ELwOQ', // placeholder - replace
-    title: 'Patient Experience: Tatoo Removal',
-    name: 'Dr. Sahana',
-    creds: 'Laser Expert',
+    id: 'wAshxi4ghfs', // placeholder - replace
+    title: 'Skin Brightrning',
+    name: 'Skin Brightening',
+    creds: 'Glutathione Drip',
   },
   {
-    id: 'V-_O7nl0Ii0', // placeholder - replace
+    id: 'k2EHaGBGWjg', // placeholder - replace
     title: 'Why choose Avatarluxe? Clinic Tour',
-    name: 'Dr. Anil',
-    creds: 'Consultant Surgeon',
+    name: 'Skin Brightening',
+    creds: 'QSwitch Laser Toning',
   },
 ];
 
