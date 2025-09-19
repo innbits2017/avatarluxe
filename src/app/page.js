@@ -267,7 +267,7 @@ export default function Home() {
               <h2 className="font-bold">2004</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Launch</h2>
@@ -278,7 +278,7 @@ export default function Home() {
               <h2 className="font-bold">2015</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Growth</h2>
@@ -289,7 +289,7 @@ export default function Home() {
               <h2 className="font-bold">2020</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Famous</h2>
@@ -300,7 +300,7 @@ export default function Home() {
               <h2 className="font-bold">2025</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Leader</h2>
