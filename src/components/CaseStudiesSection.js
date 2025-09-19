@@ -296,10 +296,21 @@ function SplitReveal({ before, after }) {
       className="relative w-full h-full select-none rounded-lg overflow-hidden bg-neutral-900"
       aria-hidden={sameImage}
     >
+
+    {/* BEFORE label */}
+      <div className="absolute top-3 left-3 z-50 bg-black/80 text-white text-xs font-semibold px-3 py-1 rounded">
+        Before
+      </div>
+
+      {/* AFTER label */}
+      <div className="absolute top-3 right-3 z-50 bg-black/80 text-white text-xs font-semibold px-3 py-1 rounded">
+        After
+      </div>
+
       {/* AFTER */}
       <div className="absolute inset-0 z-10">
         <div ref={afterWrapRef} className="absolute inset-0 transition-transform will-change-transform">
-          <Image src={after} alt="after" fill className="object-cover" />
+          <Image src={after} alt="after" fill className="object-cover object-[60%_30%]" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 mix-blend-multiply" />
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'url("/images/film-grain.png")', backgroundSize: '300px' }} />
@@ -362,11 +373,6 @@ function SplitReveal({ before, after }) {
         aria-hidden={!showTooltip}
       >
         Drag to compare
-      </div>
-
-      {/* position label */}
-      <div className="absolute bottom-3 left-3 bg-black/70 text-white text-xs font-medium px-3 py-1 rounded-full z-50">
-        {posState > 50 ? 'After' : 'Before'}
       </div>
 
       <style jsx>{`
