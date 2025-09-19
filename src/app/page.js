@@ -62,32 +62,32 @@ export default function Home() {
   {
     id: 'Giig67nMzVU',
     title: 'Synthetic Hair Transplant in Bangalore',
-    name: 'Dr. Jane Doe',
+    name: 'Biofibre',
     creds: 'MBBS, DNB — Dermatology',
   },
   {
-    id: 'dQw4w9WgXcQ', // placeholder - replace
+    id: 'OPiQa5uBUr8', // placeholder - replace
     title: 'Hair Transplant Process — Walkthrough',
-    name: 'Dr. Priya Sharma',
+    name: 'Transplant',
     creds: 'MD — Hair Restoration',
   },
   {
-    id: 'kXYiU_JCYtU', // placeholder - replace
-    title: 'Hydra Facial: Before & After',
-    name: 'Dr. Ramesh',
+    id: 'gsLLV1qmOYY', // placeholder - replace
+    title: 'Hydra Facial',
+    name: 'HF',
     creds: 'Cosmetic Specialist',
   },
   {
-    id: '3JZ_D3ELwOQ', // placeholder - replace
-    title: 'Patient Experience: Tatoo Removal',
-    name: 'Dr. Sahana',
-    creds: 'Laser Expert',
+    id: 'wAshxi4ghfs', // placeholder - replace
+    title: 'Skin Brightrning',
+    name: 'Skin Brightening',
+    creds: 'Glutathione Drip',
   },
   {
-    id: 'V-_O7nl0Ii0', // placeholder - replace
+    id: 'k2EHaGBGWjg', // placeholder - replace
     title: 'Why choose Avatarluxe? Clinic Tour',
-    name: 'Dr. Anil',
-    creds: 'Consultant Surgeon',
+    name: 'Skin Brightening',
+    creds: 'QSwitch Laser Toning',
   },
 ];
 
@@ -267,7 +267,7 @@ export default function Home() {
               <h2 className="font-bold">2004</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Launch</h2>
@@ -278,7 +278,7 @@ export default function Home() {
               <h2 className="font-bold">2015</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Growth</h2>
@@ -289,7 +289,7 @@ export default function Home() {
               <h2 className="font-bold">2020</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Famous</h2>
@@ -300,7 +300,7 @@ export default function Home() {
               <h2 className="font-bold">2025</h2>
             </div>
             <div className="flex-1 text-base md:text-lg text-center">
-              <p>The company was established by a young designer, gaining local recognition for unique, high-quality fashion.</p>
+              <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
             </div>
             <div>
               <h2 className="text-4xl">Leader</h2>
