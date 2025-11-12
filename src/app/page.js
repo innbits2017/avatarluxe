@@ -154,7 +154,7 @@ export default function Home() {
 
       <section
         ref={heroRef}
-        className="w-full min-h-screen flex text-center justify-center items-center bg-black relative"
+        className="w-full min-h-screen flex text-center justify-center items-center relative"
         style={{
           backgroundImage: `url('/images/home/Avatarluxe-landing.webp')`,
           backgroundSize: "cover",
