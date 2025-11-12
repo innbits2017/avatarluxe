@@ -155,6 +155,11 @@ export default function Home() {
       <section
         ref={heroRef}
         className="w-full min-h-screen flex text-center justify-center items-center bg-black relative"
+        style={{
+          backgroundImage: `url('/images/home/Avatarluxe-landing.webp')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
