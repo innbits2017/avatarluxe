@@ -156,7 +156,7 @@ export default function Home() {
         ref={heroRef}
         className="w-full min-h-screen flex text-center justify-center items-center relative"
         style={{
-          backgroundImage: `url('/images/home/Avatarluxe-landing.webp')`,
+          backgroundImage: `url('/images/home/Avatarluxe-landing-bg.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -168,7 +168,7 @@ export default function Home() {
           className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative px-4 -mt-[50px]"
           style={{ letterSpacing: "0.2em" }}
         >
-          AVATARLUX
+          AVATARLUXE
         </motion.h1>
         <BackgroundBeams />
       </section>
