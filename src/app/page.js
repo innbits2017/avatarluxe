@@ -180,7 +180,7 @@ export default function Home() {
           className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-30 relative px-4 -mt-[50px]"
           style={{ letterSpacing: "0.2em" }}
         >
-          AVATARLUXE
+          AVATARLUX
         </motion.h1>
       </section>
 
