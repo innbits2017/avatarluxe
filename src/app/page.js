@@ -154,23 +154,34 @@ export default function Home() {
 
       <section
         ref={heroRef}
-        className="w-full min-h-screen flex text-center justify-center items-center relative"
-        style={{
-          backgroundImage: `url('/images/home/Avatarluxe-landing-bg.webp')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative w-full min-h-screen flex text-center justify-center items-center overflow-hidden"
       >
+        {/* Full background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{
+            backgroundImage: `url('/images/home/Avatarluxe-landing-bg.webp')`,
+          }}
+        />
+
+        {/* Optional dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
+
+        {/* Background beams */}
+        <div className="absolute inset-0 z-20 pointer-events-none">
+          <BackgroundBeams />
+        </div>
+
+        {/* Foreground text */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative px-4 -mt-[50px]"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-30 relative px-4 -mt-[50px]"
           style={{ letterSpacing: "0.2em" }}
         >
           AVATARLUXE
         </motion.h1>
-        <BackgroundBeams />
       </section>
 
       <CustomCursor />
