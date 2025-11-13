@@ -27,7 +27,7 @@ export function MenuBar() {
     // fixed header wrapper
     <header className="fixed top-0 left-0 w-full z-50">
       {/* semi-transparent background with blur so image shows through */}
-       <div className="mt-4 w-[92%] md:w-[90%] lg:w-[85%] bg-black/30 backdrop-blur-sm rounded-3xl shadow-md transition-all duration-300">
+      <div className="w-full bg-black/30 backdrop-blur-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative w-full">
             <Navbar>
