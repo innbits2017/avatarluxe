@@ -2,13 +2,8 @@
 import { MenuBar } from '@/components/MenuBar';
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import CustomCursor from '@/components/CustomCursor';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { Button } from '@/components/ui/button';
-import { LuArrowRight, LuArrowUpRight } from "react-icons/lu";
 import HorizontalScrollCarousel from '@/components/horizontalScrollSection';
-import Image from 'next/image';
 import CaseStudiesSection from '@/components/CaseStudiesSection';
 import Footer from '@/components/footer';
 import { BackgroundBeamsDemo } from '@/components/BackgroundBeamsDemo';
@@ -179,7 +174,8 @@ export default function Home() {
         {/* Top headline */}
         <div className="px-6 lg:px-24 pt-16">
           <h2 className="mx-auto max-w-6xl text-5xl md:text-5xl lg:text-5xl font-light leading-tight">
-            Redefine your beauty with our accomplished Plastic Surgeons, Aesthetic physicians & Skin specialists at Avatarluxe™ in Bangalore.
+            Redefine your beauty with our Board certified plastic surgeons, Dermatologist 
+And aesthetic physicians with a collective experience of over 30 years in the field of aesthetic procedures
           </h2>
         </div>
 
@@ -292,10 +288,10 @@ export default function Home() {
       <section className="py-6">
         <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
-            <h2 className="font-bold">2004</h2>
+            <h2 className="font-bold">2022</h2>
           </div>
-          <div className="flex-1 text-base md:text-lg text-center">
-            <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
+          <div className="flex-1 text-base md:text-lg text-left">
+            <p>The only level - 2 aesthetic hospital in Bangalore to treat Hair, skin & plastic surgery all under one roof.</p>
           </div>
           <div>
             <h2 className="text-4xl">Launch</h2>
@@ -303,10 +299,10 @@ export default function Home() {
         </div>
         <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
-            <h2 className="font-bold">2015</h2>
+            <h2 className="font-bold">2023</h2>
           </div>
-          <div className="flex-1 text-base md:text-lg text-center">
-            <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
+          <div className="flex-1 text-base md:text-lg text-left">
+            <p>The only aesthetic hospital in Koramangala to be equipped with the original Hydrafacial - USA & only hospital in India to be equipped with the Milesman next gen Laser hair reduction machine - 100% manufactured in Spain</p>
           </div>
           <div>
             <h2 className="text-4xl">Growth</h2>
@@ -314,10 +310,10 @@ export default function Home() {
         </div>
         <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
-            <h2 className="font-bold">2020</h2>
+            <h2 className="font-bold">2024</h2>
           </div>
-          <div className="flex-1 text-base md:text-lg text-center">
-            <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
+          <div className="flex-1 text-base md:text-lg text-left">
+            <p>Highest number of synthetic hair implants cases in South India - Biofibre and Nido</p>
           </div>
           <div>
             <h2 className="text-4xl">Famous</h2>
@@ -327,8 +323,8 @@ export default function Home() {
           <div>
             <h2 className="font-bold">2025</h2>
           </div>
-          <div className="flex-1 text-base md:text-lg text-center">
-            <p>Consultants with a collective experience of over 25+ years in the field of Aesthetics (Hair, Skin, Laser & Plastic surgery)</p>
+          <div className="flex-1 text-base md:text-lg text-left">
+            <p>Highest number of hair transplants, synthetic hair implants in south india and the only centre in Bangalore to use the KEEP Implanters from Turkey for Hair transplant</p>
           </div>
           <div>
             <h2 className="text-4xl">Leader</h2>
