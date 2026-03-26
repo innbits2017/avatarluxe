@@ -2,7 +2,6 @@
 import {
   Navbar,
   NavBody,
-  NavItems,
   MobileNav,
   NavbarLogo,
   NavbarButton,
@@ -14,77 +13,209 @@ import { useState } from "react";
 
 export function MenuBar() {
   const navItems = [
-    { name: "Home", link: "#features" },
-    { name: "Services", link: "#pricing" },
-    { name: "About Us", link: "#aboutus" },
+    { name: "Home", link: "/" },
+    {
+      name: "Treatments",
+      children: [
+        { name: "Hair Treatments", link: "/hair-treatments" ,
+          children: [
+            {
+              name: "Synthetic Hair Transplant",
+              link: "/synthetic-hair-transplant",
+            },
+          ],
+        },
+        { name: "Surgical Treatments", 
+          link: "/surgical-treatments",
+          children: [
+            {
+              name: "Breast Augmentation",
+              link: "/breast-augmentation-surgery",
+            },
+          ],
+       },
+        { name: "Skin Treatments", link: "/skin-care-treatments", 
+        children: [   
+          {
+              name: "Laser Hair Removal",
+              link: "/laser-hair-removal",
+            },
+          ],
+        },
+      ],
+    },
+    { name: "About Us", link: "/about-us" },
     { name: "Testimonial", link: "#testimonial" },
-    { name: "Contact", link: "#contact" },
+    { name: "Contact", link: "/contact-us" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    // fixed header wrapper
     <header className="fixed top-0 left-0 w-full z-50">
-      {/* semi-transparent background with blur so image shows through */}
       <div className="w-full bg-black/30 backdrop-blur-sm shadow-sm">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="relative w-full">
-            <Navbar>
-              {/* Desktop Navigation */}
-              <NavBody>
-                <NavbarLogo />
-                <NavItems items={navItems} />
-                <div className="flex items-center gap-4">
-                  <NavbarButton variant="primary">Book Appointment</NavbarButton>
-                </div>
-              </NavBody>
+        <div className="max-w-7xl mx-auto px-4 relative">
+          <Navbar>
+            {/* Desktop Navigation */}
+            <NavBody>
+              <NavbarLogo />
 
-              {/* Mobile Navigation */}
-              <MobileNav>
-                <MobileNavHeader>
-                  <NavbarLogo />
-                  <MobileNavToggle
-                    isOpen={isMobileMenuOpen}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  />
-                </MobileNavHeader>
+              {/* Custom Nav Items with Dropdown */}
+              <div className="flex items-center gap-8">
+                {navItems.map((item, idx) => (
+                  <div key={idx} className="relative group">
+                    {item.children ? (
+                      <>
+                        <button className="text-white flex items-center gap-3">
+                          {item.name}
+                          <span className="text-xs">▼</span>
+                        </button>
 
-                <MobileNavMenu
-                  isOpen={isMobileMenuOpen}
-                  onClose={() => setIsMobileMenuOpen(false)}
-                >
-                  {navItems.map((item, idx) => (
-                    <a
-                      key={`mobile-link-${idx}`}
-                      href={item.link}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="relative text-neutral-600 dark:text-neutral-300"
-                    >
-                      <span className="block">{item.name}</span>
-                    </a>
-                  ))}
+                        {/* Dropdown */}
+                        <div className="absolute top-full left-0 mt-3 w-56 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                          {item.children.map((child, cIdx) => (
+                            <div key={cIdx} className="group/child relative">
 
-                  <div className="flex w-full flex-col gap-4">
-                    <NavbarButton
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      variant="primary"
-                      className="w-full"
-                    >
-                      Login
-                    </NavbarButton>
-                    <NavbarButton
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      variant="primary"
-                      className="w-full"
-                    >
-                      Book a call
-                    </NavbarButton>
+                              {child.children ? (
+                                <>
+                                  {/* PARENT ITEM (UNCHANGED DESIGN) */}
+                                  <a
+                                    href={child.link}
+                                    className="group flex items-center gap-2 px-4 py-3 text-sm text-white hover:bg-white/10 transition-all duration-300"
+                                  >
+                                    {/* EXISTING GOLD ARROW */}
+                                    <span className="w-4 flex justify-center text-[#D4AF37] opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                      →
+                                    </span>
+
+                                    {/* TEXT */}
+                                    <span className="transition-all duration-300 group-hover:translate-x-1">
+                                      {child.name}
+                                    </span>
+                                  </a>
+
+                                  {/* SUB-SUB MENU */}
+                                  <div className="absolute left-full top-0 ml-2 w-56 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover/child:opacity-100 group-hover/child:visible transition-all duration-300">
+                                    {child.children.map((sub, sIdx) => (
+                                      <a
+                                        key={sIdx}
+                                        href={sub.link}
+                                        className="group flex items-center gap-2 px-4 py-3 text-sm text-white hover:bg-white/10 transition-all duration-300"
+                                      >
+                                        {/* SAME GOLD ARROW HERE */}
+                                        <span className="w-4 flex justify-center text-[#D4AF37] opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                          →
+                                        </span>
+
+                                        {/* TEXT */}
+                                        <span className="transition-all duration-300 group-hover:translate-x-1">
+                                          {sub.name}
+                                        </span>
+                                      </a>
+                                    ))}
+                                  </div>
+                                </>
+                              ) : (
+                                /* NORMAL ITEM (UNCHANGED) */
+                                <a
+                                  href={child.link}
+                                  className="group flex items-center gap-2 px-4 py-3 text-sm text-white hover:bg-white/10 transition-all duration-300"
+                                >
+                                  <span className="w-4 flex justify-center text-[#D4AF37] opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                    →
+                                  </span>
+
+                                  <span className="transition-all duration-300 group-hover:translate-x-1">
+                                    {child.name}
+                                  </span>
+                                </a>
+                              )}
+
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <a href={item.link} className="text-white">
+                        {item.name}
+                      </a>
+                    )}
                   </div>
-                </MobileNavMenu>
-              </MobileNav>
-            </Navbar>
-          </div>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-4">
+                <NavbarButton variant="primary">
+                  Book Appointment
+                </NavbarButton>
+              </div>
+            </NavBody>
+
+            {/* Mobile Navigation */}
+            <MobileNav>
+              <MobileNavHeader>
+                <NavbarLogo />
+                <MobileNavToggle
+                  isOpen={isMobileMenuOpen}
+                  onClick={() =>
+                    setIsMobileMenuOpen(!isMobileMenuOpen)
+                  }
+                />
+              </MobileNavHeader>
+
+              <MobileNavMenu
+                isOpen={isMobileMenuOpen}
+                onClose={() => setIsMobileMenuOpen(false)}
+              >
+                {navItems.map((item, idx) => (
+                  <div key={idx} className="mb-4">
+                    {item.children ? (
+                      <div className="flex flex-col gap-2">
+                        <span className="text-neutral-300 font-medium">
+                          {item.name}
+                        </span>
+
+                        <div className="pl-4 flex flex-col gap-2">
+                          {item.children.map((child, cIdx) => (
+                            <a
+                              key={cIdx}
+                              href={child.link}
+                              onClick={() =>
+                                setIsMobileMenuOpen(false)
+                              }
+                              className="text-neutral-400"
+                            >
+                              {child.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.link}
+                        onClick={() =>
+                          setIsMobileMenuOpen(false)
+                        }
+                        className="text-neutral-300"
+                      >
+                        {item.name}
+                      </a>
+                    )}
+                  </div>
+                ))}
+
+                <div className="flex w-full flex-col gap-4 mt-4">
+                  <NavbarButton
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    variant="primary"
+                    className="w-full"
+                  >
+                    Book Appointment
+                  </NavbarButton>
+                </div>
+              </MobileNavMenu>
+            </MobileNav>
+          </Navbar>
         </div>
       </div>
     </header>

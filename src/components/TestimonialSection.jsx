@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+
 /* ---------- your data (unchanged) ---------- */
 const testimonials = [
   {
@@ -42,6 +43,15 @@ export default function SingleTallSectionObserver() {
 
   const vhPerTestimonial = 100;
   const totalVH = testimonials.length * vhPerTestimonial;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const check = () => setIsMobile(window.innerWidth < 768);
+  check();
+  window.addEventListener("resize", check);
+  return () => window.removeEventListener("resize", check);
+}, []);
 
   /* active index detection (same approach you had) */
   useEffect(() => {
@@ -210,7 +220,7 @@ export default function SingleTallSectionObserver() {
   return (
     <main className="bg-black text-white">
       <section className="relative" ref={sectionRef}>
-        <div style={{ height: `${totalVH}vh` }}>
+        <div style={{ height: `${isMobile ? "auto" : totalVH + "vh"}` }}>
           <div className="max-w-[1400px] mx-auto grid grid-cols-12 gap-6">
             {/* LEFT: tall flow */}
             <div className="col-span-12 md:col-span-8">
@@ -279,7 +289,7 @@ function FlowTestimonial({ testimonial, index, vhPerTestimonial, innerRef }) {
         <div className="mt-8">
           <h4 className="font-semibold">{testimonial.name}</h4>
           {/* title in gold */}
-          <p className="text-[#D9AE69]">{testimonial.title}</p>
+          <p className="text-[#D4AF37]">{testimonial.title}</p>
         </div>
       </div>
     </section>
@@ -287,7 +297,7 @@ function FlowTestimonial({ testimonial, index, vhPerTestimonial, innerRef }) {
 }
 
 /* RightImage: avatar with active/inactive animation.
-   Active: 5px #D9AE69 border.
+   Active: 5px #D4AF37 border.
    Inactive: 2px subtle white border.
 */
 function RightImage({ src, alt, isActive }) {
@@ -297,7 +307,7 @@ function RightImage({ src, alt, isActive }) {
   };
 
   // border values for active / inactive
-  const borderColor = isActive ? '#D9AE69' : 'rgba(255,255,255,0.12)';
+  const borderColor = isActive ? '#D4AF37' : 'rgba(255,255,255,0.12)';
   const borderWidth = isActive ? 3 : 2;
 
   return (

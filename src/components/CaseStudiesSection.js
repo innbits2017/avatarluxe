@@ -42,7 +42,7 @@ const caseStudies = [
 /* ---------------- SplitReveal (keeps your functionality from Code 2) ---------------- */
 function SplitReveal({ before, after }) {
   const DIVIDER_PX = 3
-  const GOLD = '#D9AE69'
+  const GOLD = '#D4AF37'
 
   const containerRef = useRef(null)
   const overlayRef = useRef(null)
@@ -510,7 +510,7 @@ export default function CaseStudiesScrolly() {
                 <button
                   key={i}
                   onClick={() => scrollToSlide(i)}
-                  className={`w-3 h-3 rounded-full transition-all ${current === i ? 'bg-[#D9AE69] scale-110' : 'bg-neutral-700 hover:bg-neutral-500'}`}
+                  className={`w-3 h-3 rounded-full transition-all ${current === i ? 'bg-[#D4AF37] scale-110' : 'bg-neutral-700 hover:bg-neutral-500'}`}
                   aria-label={`Go to case ${i + 1}`}
                 />
               ))}
@@ -539,7 +539,7 @@ export default function CaseStudiesScrolly() {
                     <h2 className="text-4xl md:text-5xl font-normal text-white leading-tight">{item.title}</h2>
 
                     {item.service && (
-                      <div className="inline-block mt-4 px-4 py-1 rounded-full border text-xs tracking-wide uppercase font-medium" style={{ borderColor: '#3f3f3f', color: '#D9AE69' }}>
+                      <div className="inline-block mt-4 px-4 py-1 rounded-full border text-xs tracking-wide uppercase font-medium" style={{ borderColor: '#3f3f3f', color: '#D4AF37' }}>
                         {item.service}
                       </div>
                     )}
@@ -570,7 +570,7 @@ export default function CaseStudiesScrolly() {
                 </div>
 
                 {/* accent */}
-                <div className="absolute left-8 bottom-6 h-px w-28 bg-gradient-to-r from-transparent via-[#D9AE69]/20 to-transparent rounded" />
+                <div className="absolute left-8 bottom-6 h-px w-28 bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent rounded" />
               </div>
             </div>
           )

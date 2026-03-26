@@ -64,11 +64,11 @@ export const NavBody = ({
         damping: 50,
       }}
       style={{
-        minWidth: "800px",
+        minWidth: "80%",
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-black/60 dark:bg-neutral-950/80",
         className
       )}>
       {children}
@@ -94,13 +94,13 @@ export const NavItems = ({
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-4 py-2 text-white"
           key={`link-${idx}`}
           href={item.link}>
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800" />
+              className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-[60%] bg-[#d4af37]" />
           )}
           <span className="relative z-20">{item.name}</span>
         </a>
@@ -192,7 +192,7 @@ export const MobileNavToggle = ({
 export const NavbarLogo = () => {
   return (
     <a
-      href="#"
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
         src="/images/Avatar-white-copy.png"

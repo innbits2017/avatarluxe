@@ -1,105 +1,165 @@
-import React from 'react';
+import React from "react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Clock,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white text-sm">
-      {/* Top section: Social & Rise.Shine.Repeat */}
-      <div className="grid md:grid-cols-2 border-b border-gray-700 px-12 py-16">
-        <div className="flex flex-col gap-6">
-          {/* Social Icons */}
-          <div className="flex gap-6 text-xl">
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-linkedin"></i>
-            <i className="fab fa-dribbble"></i>
-            <i className="fas fa-globe"></i>
+    <footer
+      id="contact"
+      className="bg-black text-white border-t"
+      style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          
+          {/* Company Info */}
+          <div>
+            <h3 className="text-xl sm:text-2xl mb-4 tracking-wider">
+              AVATARLUXE
+            </h3>
+            <p className="text-sm text-white/70 mb-4 leading-relaxed">
+              Koramangala's premier Level-2 Aesthetic & Plastic Surgery
+              Hospital, specializing in world-class breast enhancement
+              procedures.
+            </p>
+
+            <div className="flex gap-3">
+              {[Facebook, Instagram, Linkedin, Youtube].map(
+                (Icon, index) => (
+                  <a
+                    key={index}
+                    href="#"
+                    className="size-9 rounded-full flex items-center justify-center transition hover:opacity-80"
+                    style={{ backgroundColor: "#D4AF37" }}
+                  >
+                    <Icon className="size-4 text-black" />
+                  </a>
+                )
+              )}
+            </div>
           </div>
-          <p className="text-gray-400 max-w-sm">
-            Dive into a world of fresh content and exciting updates.
-            <br />
-            Follow us and let's embark on this adventure together.
-          </p>
-        </div>
-        <div className="flex justify-end items-center">
-            <h2 className="text-5xl font-light">
-                Enhance. <span className="text-gray-400">Refine.</span>{' '}
-                <span className="font-semibold">Reveal.</span>
-            </h2>
-        </div>
-      </div>
 
-      {/* Middle section: Stay Tuned & Links */}
-      <div className="grid md:grid-cols-4 border-b border-gray-700 px-12 py-16 gap-12">
-        {/* Stay Tuned */}
-        <div>
-          <h3 className="text-lg font-medium mb-4">Stay Tuned</h3>
-          <p className="text-gray-400 mb-6">
-            Stay updated with the latest digital trends, insights, and expert advice from the RAFT team — delivered directly to your inbox.
-          </p>
-          <input
-            type="email"
-            placeholder="Your E-mail"
-            className="bg-transparent border-b border-gray-500 outline-none w-full mb-6 placeholder-gray-500"
-          />
-          <button className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition flex items-center gap-2">
-            Send Message <span>→</span>
-          </button>
+          {/* Services */}
+          <div>
+            <h4 className="text-base sm:text-lg mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-white/70">
+              {[
+                "Breast Augmentation",
+                "Hair Transplant",
+                "Body Contouring",
+                "Medi Facials",
+                "Laser Treatments",
+                "Liposuction",
+                "Bio Fibre Hair Implant",
+                "Nido Hair",
+              ].map((service, i) => (
+                <li key={i}>
+                  <a
+                    href="#treatments"
+                    className="hover:text-white transition-colors"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Visiting Hours */}
+          <div>
+            <h4 className="text-base sm:text-lg mb-4">Visiting Hours</h4>
+            <div className="space-y-3 text-sm text-white/70">
+              
+              <div className="flex items-start gap-2">
+                <Clock
+                  className="size-4 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  <div className="text-white mb-1">
+                    Monday
+                  </div>
+                  <div>Closed</div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <Clock
+                  className="size-4 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  <div className="text-white mb-1">Tuesday to Sunday</div>
+                  <div>10:30 AM - 07:30 PM</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-base sm:text-lg mb-4">Contact Us</h4>
+            <div className="space-y-3 text-sm text-white/70">
+
+              <div className="flex items-start gap-2">
+                <MapPin
+                  className="size-4 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  36/C, 1st Main Road, S.T.Bed, Koramangala 4th Block, Bengaluru – 560 034 Karnataka
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <Phone
+                  className="size-4 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  <a href="tel:+91 988 446 9279">+91 988 446 9279</a> <br />
+                  <a href="tel:080 – 4111 2827">080 – 4111 2827</a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <Mail
+                  className="size-4 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  contact@avatarluxe.in 
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-        {/* Links Columns */}
-        <div>
-          <h4 className="font-semibold text-sm mb-4">COMPANY</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li>About Us</li>
-            <li>Laser Hair Removal</li>
-            <li>Hair Transplant</li>
-            <li>Our Team</li>
-            <li>Partners</li>
-            <li>Case Studies</li>
-            <li>Testimonials</li>
-            <li>Pricing</li>
-            <li>Blog</li>
-          </ul>
-        </div>
+        {/* Bottom Bar */}
+        <div
+          className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/70"
+          style={{ borderColor: "rgba(212, 175, 55, 0.2)" }}
+        >
+          <p>© 2026 Avatarluxe Aestheticians Pvt Ltd. All rights reserved.</p>
 
-        <div>
-          <h4 className="font-semibold text-sm mb-4">SERVICES</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li>Contact Us</li>
-            <li>Surgical Treatments</li>
-            <li>Non-Surgical Treatments</li>
-            <li></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-semibold text-sm mb-4">Opening hours</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li>Monday: Closed</li>
-            <li>Tuesday: 10:30 – 7:30pm</li>
-            <li>Wednesday: 10:30 – 7:30pm</li>
-            <li>Thursday: 10:30 – 7:30pm</li>
-            <li>Friday: 10:30 – 7:30pm</li>
-            <li>Saturday: 10:30 – 7:30pm</li>
-            <li>Sunday: 10:30 – 7:30pm</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Bottom section: Logo & Info */}
-      <div className="grid md:grid-cols-3 px-12 py-10 text-gray-400 text-xs border-t border-gray-700 items-center">
-        <div className="text-left font-bold text-white text-lg">Avatarluxe</div>
-        <div className="text-center">
-          <p>36/C, 1st Main Road,</p>
-          <p>S.T.Bed, Koramangala 4th Block,</p>
-          <p>Bengaluru – 560034 Karnataka</p>
-        </div>
-        <div className="text-right">
-          <p>contact@avatarluxe.in</p>
-          <p>Ph:+91 988 446 9279</p>
-          <p>Ph: 080 – 4111 2827</p>
-          <p>Thursday, Jun 5, 2025</p>
-          <p>11:26:32 AM</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+          </div>
         </div>
       </div>
     </footer>

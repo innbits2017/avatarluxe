@@ -9,6 +9,7 @@ import Footer from '@/components/footer';
 import { BackgroundBeamsDemo } from '@/components/BackgroundBeamsDemo';
 import { BackgroundBeams } from "../components/ui/background-beams";
 import TestimonialSection from "../components/TestimonialSection";
+import HeroBanner from '@/components/HeroBanner';
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -147,7 +148,7 @@ export default function Home() {
     <div className="w-full min-h-screen">
       <MenuBar />
 
-      <section
+      {/* <section
         ref={heroRef}
         className="w-full min-h-screen flex text-center justify-center items-center relative"
         style={{
@@ -166,14 +167,15 @@ export default function Home() {
           AVATARLUXE
         </motion.h1>
         <BackgroundBeams />
-      </section>
+      </section> */}
+      <HeroBanner />
 
       <CustomCursor />
 
       <section className="bg-black text-white">
         {/* Top headline */}
-        <div className="px-6 lg:px-24 pt-16">
-          <h2 className="mx-auto max-w-6xl text-5xl md:text-5xl lg:text-5xl font-light leading-tight">
+        <div className="px-6 sm:px-6 lg:px-2 pt-16">
+          <h2 className="mx-auto max-w-6xl text-4xl md:text-4xl lg:text-5xl font-light leading-tight">
             Redefine your beauty with our Board certified plastic surgeons, Dermatologist 
 And aesthetic physicians with a collective experience of over 30 years in the field of aesthetic procedures
           </h2>
@@ -227,7 +229,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
                     />
                   </defs>
                   <text
-                    fill="#D9AE69"
+                    fill="#D4AF37"
                     fontSize="12"
                     className="uppercase"
                     letterSpacing="2.5"
@@ -257,7 +259,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
       </section>
 
       {/* HERO VIDEO SECTION - play on click (user interaction) */}
-      <section ref={videoRef} className="w-full min-h-screen bg-black flex justify-center items-center overflow-hidden relative">
+      <section ref={videoRef} className="w-full min-h-[60vh] md:min-h-screen bg-black flex justify-center items-center overflow-hidden relative">
         <motion.div
           style={{
             scale: scale,
@@ -286,7 +288,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
 
       {/* Timeline blocks */}
       <section className="py-6">
-        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
+        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-1 border-[#D4AF37] justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
             <h2 className="font-bold">2022</h2>
           </div>
@@ -297,7 +299,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
             <h2 className="text-4xl">Launch</h2>
           </div>
         </div>
-        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
+        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-1 border-[#D4AF37] justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
             <h2 className="font-bold">2023</h2>
           </div>
@@ -308,7 +310,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
             <h2 className="text-4xl">Growth</h2>
           </div>
         </div>
-        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
+        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-1 border-[#D4AF37] justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
             <h2 className="font-bold">2024</h2>
           </div>
@@ -319,7 +321,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
             <h2 className="text-4xl">Famous</h2>
           </div>
         </div>
-        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-2 border-white justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
+        <div className="relative overflow-hidden group flex flex-col md:flex-row gap-6 border-b-1 border-[#D4AF37] justify-between text-3xl p-10 text-white transition-colors duration-300 ease-in-out hover:text-black bg-black hover:bg-white effect-hover">
           <div>
             <h2 className="font-bold">2025</h2>
           </div>
@@ -336,7 +338,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
       <section className="bg-black text-white min-h-screen mb-10 mt-10">
         <HorizontalScrollCarousel
           items={serviceItems}
-          title="OUR SERVICES"
+          title="Luxury Care, Redefined "
           subtitle="ADVANCED SOLUTIONS FOR SKIN, HAIR & AESTHETICS"
           heightPerCard={100}
           cardWidth={500}
@@ -344,24 +346,28 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
       </section>
 
       <section className="bg-black text-white min-h-screen">
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5">OUR CASE STUDIES</h2>
-        <p className="text-center text-gray-400 mt-2 mb-10 text-sm tracking-wide">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
           PERSONALIZED CARE, PROVEN OUTCOMES
         </p>
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5">OUR CASE STUDIES</h2>
+  
         <CaseStudiesSection />
       </section>
 
-      <section className="bg-black text-white min-h-screen">
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5 mt-30">HOW DO THEY RATE US</h2>
-        <p className="text-center text-gray-400 mt-2 text-sm tracking-wide">
+      <section className="bg-black text-white min-h-screen mt-30">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
           TRUSTED BY HUNDREDS, LOVED BY ALL
         </p>
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5">HOW DO THEY RATE US</h2>
         <TestimonialSection />
       </section>
 
             {/* Video cards carousel - clicking a card opens YouTube modal */}
-      <section className="bg-black text-white py-6 mt-20">
+      <section className="bg-black text-white py-6 mt-20 mb-20">
         <div className="max-w-6xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
+          HE CREATORS OF YOUR NEXT LOOK
+          </p>
           <motion.h2
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -370,9 +376,6 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
           >
             HEAR THEM OUT
           </motion.h2>
-          <p className="text-center text-gray-400 mt-2 text-sm tracking-wide">
-            THE CREATORS OF YOUR NEXT LOOK
-          </p>
 
           <div className="max-w-6xl mx-auto px-4 mt-5">
             <div className="relative">

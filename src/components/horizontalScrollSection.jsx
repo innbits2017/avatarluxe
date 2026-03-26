@@ -138,16 +138,16 @@ const HorizontalScrollCarousel = ({
         ref={containerRef}
       >
         {/* Title */}
-        {title && (
-          <h2 className="text-4xl md:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 ">
-            {title}
-          </h2>
+           {subtitle && (
+          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
+          {subtitle}
+        </p>
         )}
 
-        {subtitle && (
-          <p className="text-center text-gray-400 text-sm tracking-wide">
-            {subtitle}
-          </p>
+        {title && (
+          <h2 className="text-4xl md:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 uppercase">
+            {title}
+          </h2>
         )}
 
         {/* VISIBLE viewport (this is what we measure) */}
