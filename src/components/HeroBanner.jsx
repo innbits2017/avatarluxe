@@ -77,7 +77,7 @@ export default function HoverColumns() {
             {/* OVERLAY */}
             <div className="absolute inset-0 
             bg-gradient-to-t 
-            from-black/100 via-black/50 to-transparent">
+            from-black/100 via-black/30 to-transparent">
             </div>
 
             {/* CONTENT (ONLY ACTIVE) */}
@@ -104,7 +104,7 @@ export default function HoverColumns() {
               </p>
               <Button
                 variant="outline"
-                className="rounded-none border-b-[#D4AF37]/80 px-3 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black"
+                className="rounded-none border-0 border-b border-b-[#D4AF37]/80 px-3 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black"
                 onClick={() => scrollToSection("team-section")}
               >
                 {content[i].cta}

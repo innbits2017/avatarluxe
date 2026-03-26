@@ -112,7 +112,7 @@ const Footer = () => {
 
               <div className="flex items-start gap-2">
                 <MapPin
-                  className="size-4 mt-0.5"
+                  className="size-10 mt-0.5"
                   style={{ color: "#D4AF37" }}
                 />
                 <div>
