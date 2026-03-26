@@ -13,7 +13,7 @@ export default function HoverColumns() {
     },
     {
       id: 1,
-      img: "images/home/surgical-treatment-banner.webp",
+      img: "images/home/surgical-treatment-banner-new.webp",
     },
     {
       id: 2,
