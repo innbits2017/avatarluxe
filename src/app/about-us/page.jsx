@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Footer from "@/components/footer";
 import { MenuBar } from "@/components/MenuBar";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const stats = [
   { label: "Transformations", value: "10K+" },
@@ -136,6 +137,7 @@ export default function AboutUsPage() {
 
           </div>
         </div>
+        <BackgroundBeams />
       </section>
 
       {/* STORY */}

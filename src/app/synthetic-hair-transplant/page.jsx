@@ -8,6 +8,8 @@ import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
 
 
 const stats = [
@@ -119,6 +121,7 @@ export default function App() {
       
                 </div>
               </div>
+              <BackgroundBeams />
         </section>
 
         <section className="bg-black text-white mt-30">

@@ -6,6 +6,8 @@ import { MenuBar } from "@/components/MenuBar";
 import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CTA from "@/components/Cta";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
 
 
 const stats = [
@@ -140,8 +142,8 @@ export default function App() {
                   >
                     SCHEDULE CONSULTATION
                   </Button>
-      
-                </div>
+                <BackgroundBeams />
+              </div>
       
                 <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-5 border-t border-white/10 pt-7">
       

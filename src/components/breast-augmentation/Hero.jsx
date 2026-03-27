@@ -1,5 +1,7 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
 
 const stats = [
   { label: "Successful Procedures", value: "10K+" },
@@ -46,7 +48,7 @@ export function Hero() {
                   >
                     SCHEDULE CONSULTATION
                   </Button>
-      
+                <BackgroundBeams />
                 </div>
       
                 <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-5 border-t border-white/10 pt-7">
