@@ -29,13 +29,21 @@ export function TestimonialsSection() {
     <section id="testimonial" className="bg-black text-white ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 mt-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        <div className="text-left mx-auto mb-12 sm:mb-16 mt-10">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+              Reviews
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4 text-left mt-3">
             What Our Clients Say
           </h2>
-          <p className="text-white/70 text-base sm:text-lg">
+          {/* <p className="text-white/70 text-base sm:text-lg text-left">
             Real stories from real women who transformed their lives at Avatarluxe
           </p>
+   
+          
+            <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
+              What Our Clients Say
+            </h2> */}
         </div>
 
         {/* Testimonials Grid */}

@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Footer from "@/components/footer";
 import { MenuBar } from "@/components/MenuBar";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { TestimonialsSection } from "@/components/breast-augmentation/TestimonialsSection";
 
 const stats = [
   { label: "Transformations", value: "10K+" },
@@ -143,7 +144,7 @@ export default function AboutUsPage() {
       {/* STORY */}
       <section
         id="about-story-section"
-        className="mx-auto grid max-w-7xl md:grid-cols-12 gap-12 px-6 py-24 items-center"
+        className="mx-auto grid max-w-7xl md:grid-cols-12 gap-12 px-6 py-2 sm:py-20 items-center"
       >
 
         <div className="md:col-span-6">
@@ -329,42 +330,8 @@ export default function AboutUsPage() {
 {/* REVIEWS */}
 <section className="mx-auto w-full max-w-7xl px-6 pb-24 sm:px-8 md:pb-28 lg:px-12">
 
-  <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
-    Reviews
-  </p>
 
-  <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
-    What Our Clients Say
-  </h2>
-
-  <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
-
-    {reviews.map((review) => (
-      <Card
-        key={review.author}
-        className="rounded-none border-white/10 bg-black/55 backdrop-blur-sm"
-      >
-
-        <CardHeader>
-          <Quote className="h-7 w-7 text-[#D4AF37]" />
-        </CardHeader>
-
-        <CardContent className="pt-0">
-
-          <p className="text-sm leading-relaxed text-zinc-200">
-            “{review.text}”
-          </p>
-
-          <p className="mt-6 text-xs uppercase tracking-[0.25em] text-zinc-300">
-            {review.author}
-          </p>
-
-        </CardContent>
-
-      </Card>
-    ))}
-
-  </div>
+<TestimonialsSection />
 
 </section>
 

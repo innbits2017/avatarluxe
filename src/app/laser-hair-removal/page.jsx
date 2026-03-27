@@ -8,8 +8,6 @@ import { Button } from "@/components/ui/button";
 import CTA from "@/components/Cta";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
-
-
 const stats = [
   { label: "Successful Sessions", value: "10K+" },
   { label: "Client Satisfaction Rate", value: "98%" },
@@ -205,6 +203,10 @@ export default function App() {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
                   {/* Left Side - Sticky */}
                   <div className="lg:sticky lg:top-32 lg:self-start">
+                    
+                    <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+                        Reduces Hair Growth
+                    </p>
                     <h2 className="mt-5 mb-5 text-3xl sm:text-5xl font-normal">
                        Benefits of Laser Hair Removal at AvatarLuxe
                     </h2>

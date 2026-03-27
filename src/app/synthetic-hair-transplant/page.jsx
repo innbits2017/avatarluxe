@@ -4,7 +4,7 @@ import { TestimonialsSection } from "@/components/breast-augmentation/Testimonia
 import Footer from "@/components/footer";
 import { MenuBar } from "@/components/MenuBar";
 import CTA from "@/components/Cta";
-import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import { CheckCircle} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -248,7 +248,10 @@ export default function App() {
        
         <div className=" flex flex-row items-center">
           <div className="flex-1 pr-25">
-            <h2 className=" text-3xl sm:text-5xl text-left fadeUp">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+              NO DONOR. NO PROBLEM
+            </p>
+            <h2 className=" text-3xl sm:text-5xl text-left fadeUp mt-5">
               Key Highlights of the Procedure
             </h2>
             <p className="text-zinc-300 mt-5">
@@ -282,20 +285,7 @@ export default function App() {
                 </div>
 
                 <div className="flex-1 flex flex-col items-center bg-white/5 p-6 border-b-1 border-[#D4AF37] rounded-l h-[150px]">
-                  <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
-                    {/* Hair roots */}
-                    <path d="M18 10 C16 20, 20 26, 20 34" stroke="#D4AF37" strokeWidth="2.5" strokeLinecap="round"/>
-                    <path d="M30 8 C28 18, 32 26, 32 34" stroke="#D4AF37" strokeWidth="2.5" strokeLinecap="round"/>
-                    <path d="M42 10 C40 20, 44 26, 44 34" stroke="#D4AF37" strokeWidth="2.5" strokeLinecap="round"/>
-
-                    {/* Skin base */}
-                    <rect x="14" y="34" width="36" rx="4" stroke="#D4AF37" strokeWidth="2.5"/>
-
-                    {/* Follicle bulbs */}
-                    <circle cx="20" cy="44" r="2" fill="#D4AF37"/>
-                    <circle cx="32" cy="44" r="2" fill="#D4AF37"/>
-                    <circle cx="44" cy="44" r="2" fill="#D4AF37"/>
-                  </svg>
+                  <img src="/images/services/hair.webp" width="30" height="30"/>
                   <h4 className="font-semibold mb-2 mt-5">
                     Full Control Over Density
                   </h4>
@@ -383,6 +373,9 @@ export default function App() {
 
           </div>
           <div className="flex-1 pl-25">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+              TYPES
+            </p>
             <h2 className="mt-5 text-3xl sm:text-5xl mb-5 text-left fadeUp">
               Types of Biofibre
             </h2>
@@ -404,8 +397,10 @@ export default function App() {
         {/* PROCEDURE */}
     <section className="bg-black text-white px-6 md:px-16 overflow-hidden mt-30">
       <div className="max-w-7xl mx-auto">
-
-        <h2 className=" text-3xl sm:text-5xl fadeUp text-center mb-20">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+              PROCESS
+        </p>
+        <h2 className=" text-3xl sm:text-5xl fadeUp text-center mb-20 text-left mt-3">
               Procedure Details
         </h2>
 
