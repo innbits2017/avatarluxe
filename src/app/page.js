@@ -349,8 +349,9 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
         <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
           PERSONALIZED CARE, PROVEN OUTCOMES
         </p>
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5">OUR CASE STUDIES</h2>
-  
+         <h2 className=" text-3xl sm:text-5xl text-center fadeUp mb-5">
+               Our Case Studies
+            </h2>
         <CaseStudiesSection />
       </section>
 
@@ -358,7 +359,9 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
         <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
           TRUSTED BY HUNDREDS, LOVED BY ALL
         </p>
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-5">HOW DO THEY RATE US</h2>
+        <h2 className=" text-3xl sm:text-5xl text-center fadeUp">
+              How Do Rate Us
+            </h2>
         <TestimonialSection />
       </section>
 
@@ -366,16 +369,12 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
       <section className="bg-black text-white py-6 mt-20 mb-20">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
-          HE CREATORS OF YOUR NEXT LOOK
+           Hear Them Out
           </p>
-          <motion.h2
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="text-4xl md:text-5xl lg:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 relative mb-4"
-          >
-            HEAR THEM OUT
-          </motion.h2>
+
+          <h2 className=" text-3xl sm:text-5xl text-center fadeUp">
+              The Creator of the Next Look
+            </h2>
 
           <div className="max-w-6xl mx-auto px-4 mt-5">
             <div className="relative">

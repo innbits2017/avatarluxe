@@ -145,9 +145,10 @@ const HorizontalScrollCarousel = ({
         )}
 
         {title && (
-          <h2 className="text-4xl md:text-5xl font-semibold text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 z-10 uppercase">
-            {title}
-          </h2>
+    
+          <h2 className=" text-3xl sm:text-5xl text-center fadeUp mb-5">
+               {title}
+            </h2>
         )}
 
         {/* VISIBLE viewport (this is what we measure) */}

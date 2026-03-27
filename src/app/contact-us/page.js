@@ -2,17 +2,10 @@
 import { MenuBar } from '@/components/MenuBar';
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import CustomCursor from '@/components/CustomCursor';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { Button } from '@/components/ui/button';
-import { LuArrowRight, LuArrowUpRight } from "react-icons/lu";
-import HorizontalScrollCarousel from '@/components/horizontalScrollSection';
-import Image from 'next/image';
-import CaseStudiesSection from '@/components/CaseStudiesSection';
 import Footer from '@/components/footer';
 import { BackgroundBeamsDemo } from '@/components/BackgroundBeamsDemo';
-import { BackgroundBeams } from "../../components/ui/background-beams";
+import { Facebook, Instagram, Linkedin, Youtube, Clock, MapPin, Phone, Mail,
+} from "lucide-react";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -89,9 +82,6 @@ export default function Home() {
   const [open, setOpen] = useState(false); // used for YouTube modal
   const [active, setActive] = useState(null); // active video id for modal
 
-  // Hero local video playing state
-  const [heroPlaying, setHeroPlaying] = useState(false);
-
   // Open YouTube modal (called when clicking carousel card)
   const openYouTube = (videoId) => {
     setActive(videoId);
@@ -106,150 +96,102 @@ export default function Home() {
     document.body.style.overflow = '';
   };
 
-  // Play/pause the hero local video on click
-  const toggleHeroPlay = () => {
-    const vid = videoRef.current;
-    if (!vid) return;
-    if (vid.paused) {
-      // unmute and play on user interaction
-      vid.muted = false;
-      vid.play().catch((err) => {
-        // fallback: show console error but keep UI consistent
-        console.warn('Hero video play failed:', err);
-      });
-      setHeroPlaying(true);
-    } else {
-      vid.pause();
-      setHeroPlaying(false);
-    }
-  };
-
-  const serviceItems = [
-    {
-      id: 1,
-      name: 'Hair Treatment',
-      image: '/images/services/0000_Hair-website.jpg',
-    },
-    {
-      id: 2,
-      name: 'Skin Treatment',
-      image: '/images/services/0001_Skin-website-.jpg',
-    },
-    {
-      id: 3,
-      name: 'Laser Treatment',
-      image: '/images/services/0003_Laser_website.jpg',
-    },
-    {
-      id: 4,
-      name: 'Plastic Surgery',
-      image: '/images/services/0002_Plastic_surgery_website.jpg',
-    },
-  ];
-
   return (
     <div className="w-full min-h-screen">
       <MenuBar />
       <section className='mt-20 mb-10'>
         <BackgroundBeamsDemo />
-         <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-start gap-8">
+    <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-start gap-2 mt-10">
+
+      <div className="flex-1 flex items-start gap-2 bg-black p-6 rounded-xl min-h-[200px] shadow-[0_10px_30px_rgba(212,175,55,0.1),_0_0_0_1px_rgba(0,0,0,0.08)]">
+
+        {/* Icon */}
+        <MapPin
+          className="w-6 h-6 mt-1 flex-shrink-0"
+          style={{ color: "#D4AF37" }}
+        />
+
+        {/* Content */}
+        <div>
+          <h3 className="text-l font-semibold text-white">
+            Koramangala
+          </h3>
+
+          <address className="not-italic mt-3 text-zinc-300 text-sm font-light leading-relaxed">
+            36/C, 1st Main Road, S.T.Bed, Koramangla 4th Block, Bengaluru Karnataka – 560 034
+          </address>
+        </div>
+      </div>
+
         {/* Left: Address */}
-        <div className="flex-1 flex items-start gap-4 border border-gray-300 p-5 rounded-lg min-h-[200px]">
-          {/* Icon */}
-          <svg
-            className="w-7 h-7 font-light mt-1 flex-shrink-0"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
-            <circle cx="12" cy="10" r="2.5" />
-          </svg>
+      <div className="flex-1 flex items-start gap-2 bg-black p-6 rounded-xl min-h-[200px] shadow-[0_10px_30px_rgba(212,175,55,0.1),_0_0_0_1px_rgba(0,0,0,0.08)]">
 
-          <div>
-            <h3 className="text-xl font-semibold font-light">
-              Avatarluxe™ Aestheticians Pvt Ltd
-            </h3>
+        {/* Icon */}
+        <MapPin
+          className="w-6 h-6 mt-1 flex-shrink-0"
+          style={{ color: "#D4AF37" }}
+        />
 
-            <address className="not-italic mt-3 font-light space-y-1">
-              <div>36/C, 1st Main Road,</div>
-              <div>S.T.Bed, Koramangla 4th Block,</div>
-              <div>Bengaluru – 560 034 Karnataka</div>
-            </address>
-          </div>
+        {/* Content */}
+        <div>
+          <h3 className="text-l font-semibold text-white">
+            Whitefield
+          </h3>
+
+          <address className="not-italic text-sm mt-3 text-zinc-300 font-light leading-relaxed">
+            3rd Floor, Aaxis Hospital, Whitefield Main Road, Belathur Village, KR Puram, Whitefield, Bengaluru, Karnataka - 560067
+          </address>
         </div>
+      </div>
 
-        {/* Middle: Phone(s) */}
-        <div className="flex-1 flex items-start gap-4 border border-gray-300 p-5 rounded-lg min-h-[200px]">
-          {/* Icon */}
-          <svg
-            className="w-7 h-7 font-light mt-1 flex-shrink-0"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.37 2.4.72 3.54a2 2 0 0 1-.45 2.11L8.09 10.91a15.05 15.05 0 0 0 6 6l1.53-1.53a2 2 0 0 1 2.11-.45c1.14.35 2.33.6 3.54.72A2 2 0 0 1 22 16.92z" />
-          </svg>
+      <div className="flex-1 flex items-start flex-col gap-2 bg-black p-6 rounded-xl min-h-[200px] shadow-[0_10px_30px_rgba(212,175,55,0.1),_0_0_0_1px_rgba(0,0,0,0.08)]">
 
-          <div className="font-light">
-            <h3 className="text-xl font-semibold font-light">
-              Call Us
-            </h3>
-            <p className="font-semibold mb-1">
-              Phone: <span className="font-normal">+91 9884469279</span>
-            </p>
-            <p className="font-semibold">
-              Phone: <span className="font-normal">080 – 4111 2827</span>
-            </p>
-          </div>
+         <Mail
+          className="w-6 h-6 mt-1 flex-shrink-0"
+          style={{ color: "#D4AF37" }}
+        />
+
+        {/* Content */}
+        <div>
+          <h3 className="text-l font-semibold text-white">
+            Email
+          </h3>
+          <p className="font-semibold mb-1 text-sm text-zinc-300 mt-3">
+            <span className="font-normal"><a href="mailto:contact@avatarluxe.in">contact@avatarluxe.in</a></span>
+          </p>
         </div>
+      </div>
 
-        {/* Right: Email */}
-        <div className="flex-1 flex items-start gap-4 border border-gray-300 p-5 rounded-lg min-h-[200px]">
-          {/* Icon */}
-          <svg
-            className="w-7 h-7 font-light mt-1 flex-shrink-0"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="M4 4h16v16H4z" />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
+       <div className="flex-1 flex items-start flex-col gap-2 bg-black p-6 rounded-xl min-h-[200px] shadow-[0_10px_30px_rgba(212,175,55,0.1),_0_0_0_1px_rgba(0,0,0,0.08)]">
 
-          <div className="font-light">
-            <h3 className="text-xl font-semibold font-light">
-              Email Us
-            </h3>
-            <p className="font-semibold font-light">
-              Email: <a href="mailto:contact@avatarluxe.in" className="font-normal underline">contact@avatarluxe.in</a>
-            </p>
+        {/* Contact*/}
+        <Phone
+          className="w-6 h-6 mt-1 flex-shrink-0"
+          style={{ color: "#D4AF37" }}
+        />
 
-           
-          </div>
+        {/* Content */}
+        <div>
+          <h3 className="text-l font-semibold text-white">
+            Call Us
+          </h3>
+          <p className="font-semibold mb-1 text-sm text-zinc-300 mt-3">
+            <span className="font-normal"><a href="tel:+91 9884469279">+91 9884469279</a></span>
+          </p>
+          <p className="font-semibold mb-1 text-sm text-zinc-300">
+            <span className="font-normal"><a href="tel:+91 80 4111 2827">+91 80 4111 2827</a></span>
+          </p>
         </div>
+      </div>
       </div>
       </section>
 
-
-            {/* Video cards carousel - clicking a card opens YouTube modal */}
+      {/* Video cards carousel - clicking a card opens YouTube modal */}
       <section className="bg-black text-white py-6 pt-10 mt-2">
         <div className="max-w-6xl mx-auto px-4">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
+          THE CREATORS OF YOUR NEXT LOOK
+          </p>
           <motion.h2
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -258,9 +200,8 @@ export default function Home() {
           >
             HEAR THEM OUT
           </motion.h2>
-          <p className="text-center text-gray-400 mt-2 text-sm tracking-wide">
-            THE CREATORS OF YOUR NEXT LOOK
-          </p>
+
+          
 
           <div className="max-w-6xl mx-auto px-4 mt-5">
             <div className="relative">

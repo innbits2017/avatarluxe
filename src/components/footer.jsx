@@ -121,6 +121,16 @@ const Footer = () => {
               </div>
 
               <div className="flex items-start gap-2">
+                <MapPin
+                  className="size-18 mt-0.5"
+                  style={{ color: "#D4AF37" }}
+                />
+                <div>
+                  3rd Floor, Aaxis Hospital, Whitfield main road, near Reliance Digital, Belathur Village, Krishnarajapuram, Whitefield, Bengaluru, Karnataka 560067
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
                 <Phone
                   className="size-4 mt-0.5"
                   style={{ color: "#D4AF37" }}
@@ -137,7 +147,7 @@ const Footer = () => {
                   style={{ color: "#D4AF37" }}
                 />
                 <div>
-                  contact@avatarluxe.in 
+                  <a href="mailto:contact@avatarluxe.in">contact@avatarluxe.in</a>
                 </div>
               </div>
 
