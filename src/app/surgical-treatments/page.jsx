@@ -8,7 +8,7 @@ import { ArrowRight, Plus, CheckCircle, } from "lucide-react";
 import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
-
+import CTA from "@/components/Cta";
 
 
 const SERVICE_CATEGORIES = [
@@ -478,6 +478,8 @@ export default function HomePage() {
                     </div>
 
                 </div>
+
+                <CTA />
 
             </main>
 

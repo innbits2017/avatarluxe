@@ -8,6 +8,7 @@ import { ArrowRight, Plus, CheckCircle, } from "lucide-react";
 import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
+import CTA from "@/components/Cta";
 
 
 const SERVICE_CATEGORIES = [
@@ -556,6 +557,8 @@ Whether you're dealing with dullness, acne, pigmentation, or early signs of agin
                     </div>
 
                 </div>
+
+                <CTA />
 
             </main>
 
