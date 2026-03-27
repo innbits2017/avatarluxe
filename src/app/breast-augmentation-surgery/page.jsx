@@ -4,7 +4,6 @@ import { Hero } from "@/components/breast-augmentation/Hero";
 import { AboutSection } from "@/components/breast-augmentation/AboutSection";
 import { ServicesSection } from "@/components/breast-augmentation/ServicesSection";
 import  WhyChooseSection  from "@/components/breast-augmentation/WhyChooseSection";
-import { ExpertSection } from "@/components/breast-augmentation/ExpertSection";
 import { TestimonialsSection } from "@/components/breast-augmentation/TestimonialsSection";
 import { CTASection } from "@/components/breast-augmentation/CTASection";
 import Footer from "@/components/footer";

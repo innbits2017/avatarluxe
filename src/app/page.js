@@ -7,9 +7,9 @@ import HorizontalScrollCarousel from '@/components/horizontalScrollSection';
 import CaseStudiesSection from '@/components/CaseStudiesSection';
 import Footer from '@/components/footer';
 import { BackgroundBeamsDemo } from '@/components/BackgroundBeamsDemo';
-import { BackgroundBeams } from "../components/ui/background-beams";
 import TestimonialSection from "../components/TestimonialSection";
 import HeroBanner from '@/components/HeroBanner';
+
 
 export default function Home() {
   const heroRef = useRef(null);

@@ -1,4 +1,5 @@
 "use client";
+import { BackgroundBeams } from "../components/ui/background-beams";
 
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -98,5 +99,7 @@ export default function CTASection() {
         </div>
       </div>
     </section>
+    
   );
+  <BackgroundBeams />
 }

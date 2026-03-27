@@ -9,6 +9,7 @@ import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
 import CTA from "@/components/Cta";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 
 const SERVICE_CATEGORIES = [
@@ -422,8 +423,7 @@ export default function HomePage() {
                 {/* HERO */}
 
                      <section className="relative min-h-[92vh] w-full">
-                
-                
+        
                         <div className="absolute inset-0 bg-black/70" />
                 
                         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-16">
@@ -475,6 +475,7 @@ Whether you're dealing with dullness, acne, pigmentation, or early signs of agin
                         </div>
                 
                         </div>
+                        <BackgroundBeams/>
                       </section>
 
                 {/* SERVICES */}

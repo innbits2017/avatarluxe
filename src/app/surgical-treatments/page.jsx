@@ -9,6 +9,7 @@ import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
 import CTA from "@/components/Cta";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 
 const SERVICE_CATEGORIES = [
@@ -396,6 +397,7 @@ export default function HomePage() {
                         </div>
                 
                         </div>
+                        <BackgroundBeams />
                       </section>
 
                 {/* SERVICES */}
@@ -490,8 +492,6 @@ export default function HomePage() {
     )
 
 }
-
-
 
 function ServiceBlock({ category, index }) {
 
