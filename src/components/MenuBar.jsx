@@ -171,34 +171,71 @@ export function MenuBar() {
                 onClose={() => setIsMobileMenuOpen(false)}
               >
                 {navItems.map((item, idx) => (
-                  <div key={idx} className="mb-4">
+                  <div key={idx} className="mb-5">
+                    
+                    {/* MAIN ITEM */}
                     {item.children ? (
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-3">
+                        
                         <span className="text-neutral-300 font-medium">
                           {item.name}
                         </span>
 
+                        {/* LEVEL 1 */}
                         <div className="pl-4 flex flex-col gap-2">
                           {item.children.map((child, cIdx) => (
-                            <a
-                              key={cIdx}
-                              href={child.link}
-                              onClick={() =>
-                                setIsMobileMenuOpen(false)
-                              }
-                              className="text-neutral-400"
-                            >
-                              {child.name}
-                            </a>
+                            <div key={cIdx} className="flex flex-col gap-1">
+
+                              {/* CHILD ITEM */}
+                              <a
+                                href={child.link}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="group flex items-center gap-2 text-neutral-400"
+                              >
+                                {/* GOLD ARROW */}
+                                <span className="w-4 flex justify-center text-[#D4AF37] opacity-100">
+                                  →
+                                </span>
+
+                                {/* TEXT */}
+                                <span className="transition-all duration-300 group-hover:translate-x-1">
+                                  {child.name}
+                                </span>
+                              </a>
+
+                              {/* LEVEL 2 (SUB-SUB MENU) */}
+                              {child.children && (
+                                <div className="pl-6 flex flex-col gap-1 mt-1">
+                                  {child.children.map((sub, sIdx) => (
+                                    <a
+                                      key={sIdx}
+                                      href={sub.link}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className="group flex items-center gap-2 text-neutral-500 text-sm"
+                                    >
+                                      {/* GOLD ARROW */}
+                                      <span className="w-4 flex justify-center text-[#D4AF37] opacity-100">
+                                        →
+                                      </span>
+
+                                      {/* TEXT */}
+                                      <span className="transition-all duration-300 group-hover:translate-x-1">
+                                        {sub.name}
+                                      </span>
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+
+                            </div>
                           ))}
                         </div>
+
                       </div>
                     ) : (
                       <a
                         href={item.link}
-                        onClick={() =>
-                          setIsMobileMenuOpen(false)
-                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
                         className="text-neutral-300"
                       >
                         {item.name}
@@ -207,9 +244,13 @@ export function MenuBar() {
                   </div>
                 ))}
 
-                <div className="flex w-full flex-col gap-4 mt-4">
+                {/* BUTTON */}
+                <div className="flex w-full flex-col gap-4 mt-6">
                   <NavbarButton
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setOpen(true);
+                    }}
                     variant="primary"
                     className="w-full"
                   >
