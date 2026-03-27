@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, Plus, CheckCircle, } from "lucide-react";
 import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
@@ -427,14 +427,15 @@ export default function HomePage() {
                 
                         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-16">
                 
-                          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37]">
-                            Skincare Treatments
-                          </p>
-                
+                            <div className="inline-flex items-center gap-2 py-2 bg-white/10 backdrop-blur-sm px-4 rounded-full mb-2 sm:mb-2">
+                                <CheckCircle className="size-4" style={{ color: '#D4AF37' }} />
+                                <span className="text-xs sm:text-sm text-white/80">Skincare Treatments</span>
+                          </div>
+                                          
                           <h1 className="mt-6 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold">
-                            Radiant Skin with Advanced Clinical <span style={{color:"#D4AF37"}}>Skin Care Treatments</span>
+                            Radiant Skin with Advanced Clinical <span style={{ color: '#D4AF37' }}>Skin Care</span> Treatments
                            </h1>
-                
+                                            
                           <p className="mt-7 max-w-3xl text-zinc-300">
                             Our skin care treatments are designed to restore, rejuvenate, and enhance your natural beauty using a blend of advanced dermatological science and personalized care. From deep cleansing therapies to targeted clinical solutions, we focus on improving skin health, texture, and glow—safely and effectively.
 

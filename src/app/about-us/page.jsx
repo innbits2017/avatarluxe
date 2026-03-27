@@ -1,7 +1,7 @@
 "use client";
 
 import "./about.css";
-import { Award, Cpu, HeartPulse, KeyRound, Quote } from "lucide-react";
+import { Award, Cpu, HeartPulse, KeyRound, Quote, CheckCircle} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Footer from "@/components/footer";
@@ -42,29 +42,17 @@ const highlights = [
 ];
 
 const teamMembers = [
-  {
-    name: "Dr. Ethan Ross",
-    role: "Chief Hair Restoration",
+   {
+    name: "Ashrith Iyanahally",
+    role: "MBBS, MS, MCh Plastic Surgery",
     image:
-      "https://images.unsplash.com/photo-1645066928295-2506defde470?auto=format&fit=crop&w=1000&q=80",
+      "/images/dr-ashrith-iyanahally.webp",
   },
   {
-    name: "Dr. Sofia Martinez",
-    role: "Aesthetic Medicine",
+    name: "Dr. Chaitra Shankar",
+    role: "MBBS, MD DVL",
     image:
-      "https://images.unsplash.com/photo-1642975967602-653d378f3b5b?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    name: "Liam Carter",
-    role: "Trichology Consultant",
-    image:
-      "https://images.unsplash.com/photo-1573496799515-eebbb63814f2?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    name: "Ava Bennett",
-    role: "Patient Experience Lead",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1000&q=80",
+      "/images/dr-chaithra-shankar.webp",
   },
 ];
 
@@ -101,17 +89,17 @@ export default function AboutUsPage() {
 
         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-16">
 
-          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37]">
-            About Us
-          </p>
+          <div className="inline-flex items-center gap-2 py-2 bg-white/10 backdrop-blur-sm px-4 rounded-full mb-2 sm:mb-2">
+            <CheckCircle className="size-4" style={{ color: '#D4AF37' }} />
+            <span className="text-xs sm:text-sm text-white/80">About Us</span>
+          </div>
 
           <h1 className="mt-6 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold">
-            Redefining Confidence Through Precision Hair Excellence
+            Crafting Confidence Through <span style={{ color: '#D4AF37' }}>Precision & Care</span>
           </h1>
 
           <p className="mt-7 max-w-3xl text-zinc-300">
-            We are a modern restoration studio where medical mastery, aesthetic artistry,
-            and personalized care come together to create transformative outcomes.
+            At our clinic, we blend advanced medical expertise with refined aesthetic artistry to deliver results that feel natural, personal, and transformative. Every treatment is thoughtfully tailored, ensuring each client experiences renewed confidence and lasting satisfaction.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -123,6 +111,7 @@ export default function AboutUsPage() {
               Discover Our Story
             </Button>
 
+            <a href="#team-section">
             <Button
               variant="outline"
               className="rounded-none border-white/35 bg-transparent px-7 py-6 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black"
@@ -130,6 +119,7 @@ export default function AboutUsPage() {
             >
               Meet the Team
             </Button>
+            </a>
 
           </div>
 
@@ -284,54 +274,55 @@ export default function AboutUsPage() {
       </section>
 
       {/* TEAM */}
-<section
-  id="team-section"
-  className="mx-auto w-full max-w-7xl px-6 pb-24 sm:px-8 md:pb-28 lg:px-12"
->
+      <section
+        id="team-section"
+        className="flex flex-row items-center justify-center mx-auto px-6 pb-24 sm:px-8 md:pb-28 lg:px-12"
+      >
+        <div className="w-[40%]">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+          Team
+        </p>
 
-  <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
-    Team
-  </p>
+        <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
+          Meet the Experts Behind Every Transformation
+        </h2>
+        </div>
 
-  <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-4xl">
-    Meet the Experts Behind Every Transformation
-  </h2>
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2 w-[60%]">
 
-  <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {teamMembers.map((member) => {
+            const slug = member.name.toLowerCase().replace(/\s+/g, "-");
 
-    {teamMembers.map((member) => {
-      const slug = member.name.toLowerCase().replace(/\s+/g, "-");
+            return (
+              <article
+                key={member.name}
+                className="group relative aspect-[3/4] overflow-hidden border border-white/10 bg-black"
+              >
 
-      return (
-        <article
-          key={member.name}
-          className="group relative aspect-[3/4] overflow-hidden border border-white/10 bg-black"
-        >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="h-full w-full object-cover object-center grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                />
 
-          <img
-            src={member.image}
-            alt={member.name}
-            className="h-full w-full object-cover object-center grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-          />
+                <div className="absolute inset-x-0 bottom-0 translate-y-8 bg-black/85 p-3   pb-5 transition-transform duration-500 group-hover:translate-y-0">
 
-          <div className="absolute inset-x-0 bottom-0 translate-y-8 bg-black/85 p-3   pb-5 transition-transform duration-500 group-hover:translate-y-0">
+                  <h3 className="text-lg font-medium text-white">
+                    {member.name}
+                  </h3>
 
-            <h3 className="text-lg font-medium text-white">
-              {member.name}
-            </h3>
+                  <p className="mt-1 text-xs uppercase tracking-[0.1em] text-zinc-300">
+                    {member.role}
+                  </p>
 
-            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-zinc-300">
-              {member.role}
-            </p>
+                </div>
+              </article>
+            );
+          })}
 
-          </div>
-        </article>
-      );
-    })}
+        </div>
 
-  </div>
-
-</section>
+      </section>
 
 {/* REVIEWS */}
 <section className="mx-auto w-full max-w-7xl px-6 pb-24 sm:px-8 md:pb-28 lg:px-12">

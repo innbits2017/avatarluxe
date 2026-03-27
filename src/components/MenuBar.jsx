@@ -10,8 +10,10 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 
 export function MenuBar() {
+  const [open, setOpen] = useState(false);
   const navItems = [
     { name: "Home", link: "/" },
     {
@@ -54,7 +56,7 @@ export function MenuBar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="w-full bg-black/30 backdrop-blur-sm shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 relative">
+        <div className="max-w-8xl mx-auto px-4 relative">
           <Navbar>
             {/* Desktop Navigation */}
             <NavBody>
@@ -145,10 +147,11 @@ export function MenuBar() {
               </div>
 
               <div className="flex items-center gap-4">
-                <NavbarButton variant="primary">
+                <NavbarButton variant="primary" onClick={() => setOpen(true)}>
                   Book Appointment
                 </NavbarButton>
               </div>
+              {open && <PopupForm onClose={() => setOpen(false)} />}
             </NavBody>
 
             {/* Mobile Navigation */}

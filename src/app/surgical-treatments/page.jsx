@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useSpring, useInView } from "framer-motion";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, Plus, CheckCircle, } from "lucide-react";
 import { MenuBar } from "@/components/MenuBar";
 import Footer from "@/components/footer";   
 import { Button } from "@/components/ui/button";
@@ -350,10 +350,11 @@ export default function HomePage() {
                         <div className="absolute inset-0 bg-black/70" />
                 
                         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-16">
-                
-                          <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37]">
-                            Surgical Treatments
-                          </p>
+
+                          <div className="inline-flex items-center gap-2 py-2 bg-white/10 backdrop-blur-sm px-4 rounded-full mb-2 sm:mb-2">
+                                <CheckCircle className="size-4" style={{ color: '#D4AF37' }} />
+                                <span className="text-xs sm:text-sm text-white/80">Surgical Treatments</span>
+                         </div>
                 
                           <h1 className="mt-6 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold">
                             Elevating Confidence with Advanced <span style={{color:"#D4AF37"}}>Cosmetic Surgery</span> in Bangalore
