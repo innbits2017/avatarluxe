@@ -247,7 +247,7 @@ export default function App() {
             <h2 className=" text-3xl sm:text-5xl text-left fadeUp">
               Key Highlights of the Procedure
             </h2>
-            <p className="text-zinc-300">
+            <p className="text-zinc-300 mt-5">
               Experience cutting-edge biofibre hair implant technology designed to deliver instant results, precise density control, and long-lasting confidence — even for patients with no donor hair.
             </p>
             <Button

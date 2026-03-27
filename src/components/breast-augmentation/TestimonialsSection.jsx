@@ -31,7 +31,7 @@ export function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">
-            What Our <span style={{ color: '#D4AF37' }}>Clients Say</span>
+            What Our Clients Say
           </h2>
           <p className="text-white/70 text-base sm:text-lg">
             Real stories from real women who transformed their lives at Avatarluxe
@@ -52,11 +52,11 @@ export function TestimonialsSection() {
               </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              {/* <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="size-4 sm:size-5 fill-current" style={{ color: '#D4AF37' }} />
                 ))}
-              </div>
+              </div> */}
 
               {/* Testimonial Text */}
               <p className="text-white/70 mb-6 text-sm sm:text-base leading-relaxed relative z-10">
@@ -65,9 +65,9 @@ export function TestimonialsSection() {
 
               {/* Author Info */}
               <div className="flex items-center gap-4 pt-4 border-t" style={{ borderColor: 'rgba(212, 175, 55, 0.2)' }}>
-                <div className="size-12 sm:size-14 rounded-full overflow-hidden flex-shrink-0">
+                {/* <div className="size-12 sm:size-14 rounded-full overflow-hidden flex-shrink-0">
                   <div className="w-full h-full" style={{ background: `linear-gradient(135deg, #D4AF37 0%, #8B7923 100%)` }} />
-                </div>
+                </div> */}
                 <div>
                   <div className="text-base sm:text-lg mb-1">{testimonial.name}</div>
                   <div className="text-xs sm:text-sm text-white/60">{testimonial.procedure}</div>
