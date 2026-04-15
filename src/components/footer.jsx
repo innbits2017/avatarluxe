@@ -4,6 +4,7 @@ import {
   Instagram,
   Linkedin,
   Youtube,
+  Pinterest,
   Clock,
   MapPin,
   Phone,
