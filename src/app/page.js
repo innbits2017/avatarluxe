@@ -349,7 +349,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
         <p className="text-xs uppercase tracking-[0.35em] text-[#D4AF37] text-center mb-5">
           PERSONALIZED CARE, PROVEN OUTCOMES
         </p>
-         <h2 className=" text-3xl sm:text-5xl text-center fadeUp mb-10">
+         <h2 className=" text-3xl sm:text-5xl text-center fadeUp mb-15">
                Our Case Studies
             </h2>
         <CaseStudiesSection />
