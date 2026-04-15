@@ -4,7 +4,6 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  Pinterest,
   Clock,
   MapPin,
   Phone,
@@ -33,7 +32,7 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-3">
-              {[Facebook, Instagram, Linkedin, Youtube, Pinterest].map(
+              {[Facebook, Instagram, Linkedin, Youtube].map(
                 (Icon, index) => (
                   <a
                     key={index}
