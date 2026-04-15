@@ -41,7 +41,7 @@ cta: "EXPLORE TREATMENTS",
 },
 ];
 
-return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
+return ( <section className="flex flex-col md:flex-row md:min-h-[600px] w-full overflow-hidden">
 {items.map((item, i) => {
 const isActive = active === i;
 
