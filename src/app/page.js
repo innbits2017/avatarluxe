@@ -1,19 +1,4 @@
 'use client';
-
-export const metadata = {
-  title: "Avatar Luxe | Premium Hair, Skin & Cosmetic Treatments",
-  description:
-    "Avatar Luxe offers advanced hair transplant, skin treatments, and cosmetic surgery with cutting-edge technology for safe, effective and long-lasting results.",
-  keywords: [
-    "hair transplant Bangalore",
-    "skin treatment clinic",
-    "cosmetic surgery",
-    "laser treatment",
-    "aesthetic clinic India",
-  ],
-};
-
-
 import { MenuBar } from '@/components/MenuBar';
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
