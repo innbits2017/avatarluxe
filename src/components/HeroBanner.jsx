@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 export default function HoverColumns() {
 const [active, setActive] = useState(null);
 
-// Fix for button click (prevents error)
 const scrollToSection = (id) => {
 if (typeof window !== "undefined") {
 const el = document.getElementById(id);
@@ -53,7 +52,7 @@ cta: "EXPLORE TREATMENTS",
 },
 ];
 
-return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
+return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full">
 {items.map((item, i) => {
 const isActive = active === i;
 
@@ -66,6 +65,10 @@ const isActive = active === i;
           relative cursor-pointer overflow-hidden
           transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
           flex-shrink-0 flex-grow-0
+
+          /* MOBILE FIX */
+          h-[300px] md:h-auto
+
           ${
             active === null
               ? "basis-1/3"
