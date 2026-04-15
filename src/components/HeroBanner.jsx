@@ -12,9 +12,18 @@ if (el) el.scrollIntoView({ behavior: "smooth" });
 };
 
 const items = [
-{ id: 0, img: "images/services/synthetic-hair-implants.webp" },
-{ id: 1, img: "images/home/surgical-treatment-banner-new.webp" },
-{ id: 2, img: "images/home/Laser-skin-treatment-AvatarLuxe.webp" },
+{
+id: 0,
+img: "images/services/synthetic-hair-implants.webp",
+},
+{
+id: 1,
+img: "images/home/surgical-treatment-banner-new.webp",
+},
+{
+id: 2,
+img: "images/home/Laser-skin-treatment-AvatarLuxe.webp",
+},
 ];
 
 const content = [
@@ -41,7 +50,7 @@ cta: "EXPLORE TREATMENTS",
 },
 ];
 
-return ( <section className="flex flex-col md:flex-row md:min-h-[600px] w-full overflow-hidden">
+return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
 {items.map((item, i) => {
 const isActive = active === i;
 
@@ -55,7 +64,7 @@ const isActive = active === i;
         key={i}
         onMouseEnter={() => setActive(i)}
         onMouseLeave={() => setActive(null)}
-        className={`relative cursor-pointer overflow-hidden transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full h-[320px] flex-none md:flex-shrink-0 md:flex-grow-0 ${basisClass}`}
+        className={`relative cursor-pointer overflow-hidden transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full h-[320px] flex-none md:flex-shrink-0 md:flex-grow-0 md:h-full ${basisClass}`}
       >
         {/* IMAGE */}
         <img
@@ -104,6 +113,5 @@ const isActive = active === i;
     );
   })}
 </section>
-
 );
 }
