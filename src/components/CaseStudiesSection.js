@@ -11,32 +11,28 @@ const caseStudies = [
     title: 'Zainab',
     service: 'Hydra Facial',
     para:
-      'No matter what your Hair, skin and aesthetic goals are, our tremendously skilled Professionals will treat you accurately under the right protocol.',
-  },
+      'Achieving radiant, hydrated skin starts with the right care. Zainab’s skin was treated using our advanced Hydra Facial protocol, targeting dullness, uneven texture, and dehydration. With deep cleansing, exfoliation, and intense hydration, her skin now appears visibly brighter, smoother, and refreshed—restoring a natural, healthy glow.' },
   {
     beforeimage: '/images/home/case-studies/dr-atul-before.webp',
     afterimage: '/images/home/case-studies/dr-atul-new-after.webp',
     title: 'Dr. Atul',
     service: 'Hair Transplant',
     para:
-      'No matter what your Hair, skin and aesthetic goals are, our tremendously skilled Professionals will treat you accurately under the right protocol.',
-  },
+      'Precision and natural results were the focus of Dr. Atul’s hair restoration journey. Using advanced hair transplant techniques, we carefully redesigned the hairline and improved density in thinning areas. The result is a fuller, natural-looking hairline that enhances overall appearance and confidence.'},
   {
     beforeimage: '/images/home/case-studies/divya-before.webp',
     afterimage: '/images/home/case-studies/divya-after.webp',
     title: 'Divya',
     service: 'Hair Transplant',
     para:
-      'No matter what your Hair, skin and aesthetic goals are, our tremendously skilled Professionals will treat you accurately under the right protocol.',
-  },
+      'Hair thinning can impact both appearance and confidence. For Divya, we addressed visible scalp exposure and low density with a customized hair transplant solution. The transformation shows significantly improved coverage and volume, delivering a natural look that blends seamlessly with existing hair.'},
   {
     beforeimage: '/images/home/case-studies/arun-before.webp',
     afterimage: '/images/home/case-studies/arun-after.webp',
     title: 'Arun Roberts',
     service: 'Hair Transplant',
     para:
-      'No matter what your Hair, skin and aesthetic goals are, our tremendously skilled Professionals will treat you accurately under the right protocol.',
-  },
+      'Arun’s case focused on restoring hairline definition and improving side density. With meticulous graft placement and a personalized approach, we achieved a sharper, fuller hairline while maintaining a completely natural finish. The result is a well-balanced look that complements his facial features.'},
 ]
 
 /* ---------------- SplitReveal (keeps your functionality from Code 2) ---------------- */

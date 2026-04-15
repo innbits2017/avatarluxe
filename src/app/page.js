@@ -71,7 +71,7 @@ export default function Home() {
     },
     {
       id: 'wAshxi4ghfs',
-      title: 'Skin Brightrning',
+      title: 'Skin Brightening',
       name: 'Skin Brightening',
       creds: 'Glutathione Drip',
     },
