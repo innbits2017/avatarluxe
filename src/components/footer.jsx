@@ -32,7 +32,7 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-3">
-              {[Facebook, Instagram, Linkedin, Youtube].map(
+              {[Facebook, Instagram, Linkedin, Youtube, Pinterest].map(
                 (Icon, index) => (
                   <a
                     key={index}
