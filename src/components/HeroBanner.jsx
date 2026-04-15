@@ -6,15 +6,27 @@ import { Button } from "@/components/ui/button";
 export default function HoverColumns() {
 const [active, setActive] = useState(null);
 
+// ✅ Prevent error
 const scrollToSection = (id) => {
+if (typeof window !== "undefined") {
 const el = document.getElementById(id);
 if (el) el.scrollIntoView({ behavior: "smooth" });
+}
 };
 
 const items = [
-{ id: 0, img: "images/services/synthetic-hair-implants.webp" },
-{ id: 1, img: "images/home/surgical-treatment-banner-new.webp" },
-{ id: 2, img: "images/home/Laser-skin-treatment-AvatarLuxe.webp" },
+{
+id: 0,
+img: "images/services/synthetic-hair-implants.webp",
+},
+{
+id: 1,
+img: "images/home/surgical-treatment-banner-new.webp",
+},
+{
+id: 2,
+img: "images/home/Laser-skin-treatment-AvatarLuxe.webp",
+},
 ];
 
 const content = [
@@ -34,28 +46,41 @@ cta: "EXPLORE TREATMENTS",
 },
 {
 id: 2,
-subtitle: "Advanced Laser Treatment",
+subtitle: "Advanced Laser Treatment ",
 title: "Skin Treatments",
 desc: "Non-invasive laser therapies to rejuvenate skin, enhance glow, and restore youthful radiance.",
 cta: "EXPLORE TREATMENTS",
 },
 ];
 
-return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
+return ( <section className="flex h-[600px] w-full overflow-hidden">
 {items.map((item, i) => {
 const isActive = active === i;
-
-    let basisClass = "md:basis-1/3";
-    if (active !== null) {
-      basisClass = isActive ? "md:basis-[80%]" : "md:basis-[10%]";
-    }
 
     return (
       <div
         key={i}
         onMouseEnter={() => setActive(i)}
         onMouseLeave={() => setActive(null)}
-        className={`relative cursor-pointer overflow-hidden transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full h-[320px] flex-none md:flex-shrink-0 md:flex-grow-0 ${basisClass}`}
+        className={`
+          relative cursor-pointer overflow-hidden
+          transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+
+          /* MOBILE ONLY */
+          w-full h-[320px]
+
+          /* DESKTOP (UNCHANGED) */
+          md:w-auto md:h-auto
+          md:flex-shrink-0 md:flex-grow-0
+
+          ${
+            active === null
+              ? "md:basis-1/3"
+              : isActive
+              ? "md:basis-[80%]"
+              : "md:basis-[10%]"
+          }
+        `}
       >
         {/* IMAGE */}
         <img
@@ -69,32 +94,44 @@ const isActive = active === i;
 
         {/* CONTENT */}
         <div
-          className={`absolute bottom-6 left-4 right-4 z-10 max-w-sm transition-all duration-500 ${
-            active === null
-              ? "md:opacity-100 md:translate-y-0"
-              : isActive
-              ? "md:opacity-100 md:translate-y-0"
-              : "md:opacity-0 md:translate-y-6 md:pointer-events-none"
-          } opacity-100 translate-y-0`}
+          className={`
+            absolute bottom-10 left-6 z-10 max-w-sm
+            transition-all duration-500
+
+            /* MOBILE: always visible */
+            opacity-100 translate-y-0
+
+            /* DESKTOP */
+            ${
+              active === null
+                ? "md:opacity-100 md:translate-y-0"
+                : isActive
+                ? "md:opacity-100 md:translate-y-0"
+                : "md:opacity-0 md:translate-y-6 md:pointer-events-none"
+            }
+          `}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full mb-2">
-            <CheckCircle className="size-4 text-[#D4AF37]" />
-            <span className="text-xs text-white/80">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-2 sm:mb-2">
+            <CheckCircle
+              className="size-4"
+              style={{ color: "#D4AF37" }}
+            />
+            <span className="text-xs sm:text-sm text-white/80">
               {content[i].subtitle}
             </span>
           </div>
 
-          <h3 className="text-lg md:text-2xl font-semibold text-white mb-1 md:mb-2">
+          <h3 className="text-2xl font-semibold text-white mb-2">
             {content[i].title}
           </h3>
 
-          <p className="text-sm md:text-base text-zinc-200 mb-3 md:mb-4">
+          <p className="text-zinc-200 mb-4">
             {content[i].desc}
           </p>
 
           <Button
             variant="outline"
-            className="rounded-none border-0 border-b border-b-[#D4AF37]/80 px-3 py-4 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black"
+            className="rounded-none border-0 border-b border-b-[#D4AF37]/80 px-3 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black"
             onClick={() => scrollToSection("team-section")}
           >
             {content[i].cta}
