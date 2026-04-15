@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function HoverColumns() {
 const [active, setActive] = useState(null);
 
-// ✅ Prevent error
+// Fix for button click (prevents error)
 const scrollToSection = (id) => {
 if (typeof window !== "undefined") {
 const el = document.getElementById(id);
@@ -53,7 +53,7 @@ cta: "EXPLORE TREATMENTS",
 },
 ];
 
-return ( <section className="flex h-[600px] w-full overflow-hidden">
+return ( <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
 {items.map((item, i) => {
 const isActive = active === i;
 
@@ -65,20 +65,13 @@ const isActive = active === i;
         className={`
           relative cursor-pointer overflow-hidden
           transition-[flex-basis] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-
-          /* MOBILE ONLY */
-          w-full h-[320px]
-
-          /* DESKTOP (UNCHANGED) */
-          md:w-auto md:h-auto
-          md:flex-shrink-0 md:flex-grow-0
-
+          flex-shrink-0 flex-grow-0
           ${
             active === null
-              ? "md:basis-1/3"
+              ? "basis-1/3"
               : isActive
-              ? "md:basis-[80%]"
-              : "md:basis-[10%]"
+              ? "basis-[80%]"
+              : "basis-[10%]"
           }
         `}
       >
