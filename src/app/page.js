@@ -293,7 +293,7 @@ And aesthetic physicians with a collective experience of over 30 years in the fi
             <h2 className="font-bold">2022</h2>
           </div>
           <div className="flex-1 text-base md:text-lg text-left">
-            <p>The only level - 2 aesthetic hospital in Bangalore to treat Hair, skin & plastic surgery all under one roof.</p>
+            <p>The only level - 2 aesthetic hospital in Bangalore to treat hair, skin & plastic surgery all under one roof.</p>
           </div>
           <div>
             <h2 className="text-4xl">Launch</h2>
