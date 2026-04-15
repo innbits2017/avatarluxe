@@ -1,4 +1,52 @@
-<section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
+"use client";
+import { useState } from "react";
+import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function HoverColumns() {
+  const [active, setActive] = useState(null);
+
+  const items = [
+    {
+      id: 0,
+      img: "images/services/synthetic-hair-implants.webp",
+    },
+    {
+      id: 1,
+      img: "images/home/surgical-treatment-banner-new.webp",
+    },
+    {
+      id: 2,
+      img: "images/home/Laser-skin-treatment-AvatarLuxe.webp",
+    },
+  ];
+
+  const content = [
+  {
+    id: 0,
+    subtitle: "Advanced Hair Transplants",
+    title: "Hair Treatments",
+    desc: "Restoring confidence with cutting-edge synthetic hair solutions and natural aesthetics.",
+    cta: "EXPLORE TREATMENTS",
+  },
+  {
+    id: 1,
+    subtitle: "Advanced Breast Augmentation",
+    title: "Surgical Treatments",
+    desc: "Precision-led procedures with advanced technology for safe, effective, and lasting aesthetic results.",
+    cta: "EXPLORE TREATMENTS",
+  },
+  {
+    id: 2,
+    subtitle: "Advanced Laser Treatment ",
+    title: "Skin Treatments",
+    desc: "Non-invasive laser therapies to rejuvenate skin, enhance glow, and restore youthful radiance.",
+    cta: "EXPLORE TREATMENTS",
+  },
+];
+
+  return (
+    <section className="flex flex-col md:flex-row md:h-[600px] w-full overflow-hidden">
   {items.map((item, i) => {
     const isActive = active === i;
 
@@ -84,3 +132,5 @@
     );
   })}
 </section>
+  );
+}
