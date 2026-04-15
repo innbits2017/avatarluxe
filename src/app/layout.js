@@ -8,7 +8,7 @@ const henkenGrotesk = Hanken_Grotesk({
 
 
 export const metadata = {
-  title: "Avatar Luxe | Premium Hair, Skin & Cosmetic Treatments",
+  title: "Avatarluxe | Premium Hair, Skin & Cosmetic Treatments",
   description:
     "Avatar Luxe offers advanced hair transplant, skin treatments, and cosmetic surgery with cutting-edge technology for safe, effective and long-lasting results.",
   keywords: [
